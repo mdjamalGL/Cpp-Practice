@@ -18,6 +18,11 @@ bool checkPalindrome(std::string &str)
     }
     return true;
 }
+
+void funct()
+{
+    std::cout<<"Hello World"<<std::endl;
+}
 int main()
 {
     std::string str;
