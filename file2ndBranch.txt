@@ -1,0 +1,2 @@
+This text file was created in the second branch.
+and will be used for the purpose of testing rebase.
