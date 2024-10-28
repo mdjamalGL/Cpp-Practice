@@ -1,0 +1,2 @@
+This is the second file that i have created to test rebase
+this is second commit in the newBranch branch
