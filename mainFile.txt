@@ -1,2 +1,0 @@
-This is file created in main branch to test rebase
-we will use it make 1st commit after new Branch is created
