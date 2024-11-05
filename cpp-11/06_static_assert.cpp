@@ -3,6 +3,10 @@
 
 int main()
 {
+    /**
+     * asset is done at runtime : uses cases like validating user input
+     * static_assert is done at compile time: uses cases like checking type compatibility
+     */
     std::cout<<"This statement was printed before assert\n";
     int var = 4;
 
