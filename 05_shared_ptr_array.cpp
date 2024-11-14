@@ -27,6 +27,7 @@ int main()
      * note the type for shared_ptr is  "int[]"
      */
     std::shared_ptr<int[]> array1 = std::make_shared<int[]>(5);
+    
     for(int i = 0; i < 5; i++)
     {
         array1[i] = i;
