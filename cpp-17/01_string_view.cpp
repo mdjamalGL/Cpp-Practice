@@ -21,5 +21,9 @@ int main()
     local_view.remove_suffix(3);
     print("After Removing 3 suffix characters", local_view);
     print("But original owner string does not get affected", hlo);
+
+    hlo = "apple";
+    print("string_view : ", local_view);
+    print("original string : ", hlo);
     return 0;
 }
