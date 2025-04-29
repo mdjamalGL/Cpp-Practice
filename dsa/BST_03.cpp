@@ -1,6 +1,5 @@
 /**
- * Build the BST
- * Insert node into the BST
+ * Search an element
  */
 
 #include <iostream>
@@ -60,6 +59,42 @@ Node *insert_bst(Node *head, int val)
 
 }
 
+Node *search_bst(Node *head, int find_val)
+{
+    Node *trav = head;
+    while(trav != NULL)
+    {
+        if(trav->key == find_val)
+        {
+            return trav;
+        }
+        else if(trav->key <= find_val)
+        {
+            if(trav->right != NULL)
+            {
+                trav = trav->right;
+            }
+            else
+            {
+                std::cout<<"Node not Present"<<std::endl;
+                return NULL;
+            }
+        }
+        else if(trav->key > find_val)
+        {
+            if(trav->left != NULL)
+            {
+                trav = trav->left;
+            }
+            else
+            {
+                std::cout<<"Node not Present"<<std::endl;
+                return NULL;
+            }
+        }
+    }
+    return NULL;
+}
 void print_inorder(Node *head)
 {
     if(head->left != NULL)
@@ -89,5 +124,17 @@ int main()
     std::cout<<"inorder traversal :  ";
     print_inorder(head);
     std::cout<<std::endl;
-    
+
+    int find_val;
+    std::cout<<"Enter Val to Search : ";
+    std::cin>>find_val;
+    Node *ret = search_bst(head, find_val);
+    if(ret != NULL)
+    {
+        std::cout<<"Node Found : "<<std::endl;
+        std::cout<<"\t\tparent : "<<ret->p->key<<std::endl;
+        std::cout<<"\t\tleft child : "<<((ret->left != NULL) ? ret->left->key : -1)<<std::endl;
+        std::cout<<"\t\tright child : "<<((ret->right != NULL) ? ret->right->key : -1)<<std::endl;
+    }
+
 }
